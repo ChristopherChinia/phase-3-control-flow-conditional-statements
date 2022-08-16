@@ -1,4 +1,4 @@
-def admin_login(username, password)
+def admin_login username, password
   if ((username == 'admin' || username == 'ADMIN') && password == '12345')
     return "Access granted"
 
@@ -7,10 +7,10 @@ def admin_login(username, password)
   end
 end
 
-def hows_the_weather(temperature)
+def hows_the_weather temperature
   if temperature < 40
     "It's brisk out there!"
-  elsif temperature <=65
+  elsif temperature >=40 && temperature <=65
     "It's a little chilly out there!"
   elsif temperature > 85
     "It's too dang hot out there!"
@@ -19,7 +19,7 @@ def hows_the_weather(temperature)
   end
 end
 
-def fizzbuzz(num)
+def fizzbuzz num 
   if num % 5 == 0 && num % 3 == 0
     'FizzBuzz'
   elsif num % 3 == 0
